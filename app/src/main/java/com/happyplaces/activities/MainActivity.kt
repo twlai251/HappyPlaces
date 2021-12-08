@@ -16,7 +16,6 @@ import com.happyplaces.models.HappyPlaceModel
 import com.happyplaces.utils.SwipeToDeleteCallback
 import kotlinx.android.synthetic.main.activity_main.*
 import pl.kitek.rvswipetodelete.SwipeToEditCallback
-import kotlinx.android.synthetic.main.item_happy_place.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -97,9 +96,9 @@ class MainActivity : AppCompatActivity() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val adapter = rv_happy_places_list.adapter as HappyPlacesAdapter
                 adapter.notifyEditItem(
-                        this@MainActivity,
-                        viewHolder.adapterPosition,
-                        ADD_PLACE_ACTIVITY_REQUEST_CODE
+                    this@MainActivity,
+                    viewHolder.adapterPosition,
+                    ADD_PLACE_ACTIVITY_REQUEST_CODE
                 )
             }
         }
